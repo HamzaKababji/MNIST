@@ -44,7 +44,6 @@ model = tf.keras.Sequential([
 ])
 
 # Compiling Model
-
 model.compile(
     optimizer=tf.keras.optimizers.RMSprop(epsilon=1e-8),
     loss='categorical_crossentropy',
@@ -68,7 +67,6 @@ history = model.fit(train_images, train_labels,
                     callbacks=[callbacks])
 
 # Evaluate Model
-
 fig, ax = plt.subplots(2, 1)
 ax[0].plot(history.history['loss'], color='b', label='Training Loss')
 ax[0].plot(history.history['val_loss'], color='r', label='Validation Loss')
